@@ -1,0 +1,32 @@
+.home {
+	&__introduce {
+		position: relative;
+
+		&__hero {
+		}
+
+		&__title {
+			position: absolute;
+			width: 30vh;
+			top: 20%;
+			left: 5%;
+			z-index: 1;
+		}
+
+		&__actions {
+			position: absolute;
+			width: 90%;
+			padding: 20px;
+			bottom: 5%;
+			left: 5%;
+			background: rgb(238, 255, 241);
+			background: linear-gradient(
+				90deg,
+				rgba(238, 255, 241, 1) 0%,
+				rgba(233, 255, 240, 1) 33%,
+				rgba(239, 255, 241, 1) 70%
+			);
+			z-index: 1;
+		}
+	}
+}

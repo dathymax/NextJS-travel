@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import TSNHeader from '../common/header';
 import Background from '@/assets/backgrounds/hero.jpg';
 import "./home.scss";
 import { CiLocationArrow1 } from "react-icons/ci";
@@ -10,7 +9,6 @@ import { AiOutlineUser } from "react-icons/ai";
 const HomePage = () => {
     return (
         <div className='home__introduce h-screen'>
-            <TSNHeader />
             <Image src={Background} alt="Background" className='home__introduce__hero w-full h-[80vh] rounded-2xl saturate-50 drop-shadow-2xl' />
             <div className="home__introduce__title text-white">
                 <h2 className="font-bold text-7xl">

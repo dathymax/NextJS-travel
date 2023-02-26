@@ -1,34 +1,34 @@
+import React from 'react'
 import Image from 'next/image';
-import React from 'react';
 import Background from '@/assets/backgrounds/hero.jpg';
-import "./home.scss";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { BsSearch, BsCalendar2Event } from 'react-icons/bs';
 import { AiOutlineUser } from "react-icons/ai";
+import "./hero.scss";
 
-const HomePage = () => {
+const HeroBanner = () => {
     return (
-        <div className='home__introduce h-screen'>
-            <Image src={Background} alt="Background" className='home__introduce__hero w-full h-[80vh] rounded-2xl saturate-50 drop-shadow-2xl' />
-            <div className="home__introduce__title text-white">
+        <div className='hero__introduce h-screen'>
+            <Image src={Background} alt="Background" className='hero__introduce__hero w-full h-[80vh] rounded-2xl saturate-50 drop-shadow-2xl' />
+            <div className="hero__introduce__title text-white">
                 <h2 className="font-bold text-7xl">
                     Air, sleep, dream
                 </h2>
                 <p className='mt-2'>
                     Find and book a great experience.
                 </p>
-                <p className='mt-2 transition-all bg-transparent border border-white border-2 w-[60%] text-center rounded-3xl p-2 cursor-pointer hover:bg-white hover:text-black'>
+                <p className='mt-2 transition-all bg-transparent border-white border-2 w-[60%] text-center rounded-3xl p-2 cursor-pointer hover:bg-white hover:text-black'>
                     Start your search
                 </p>
             </div>
-            <div className="home__introduce__actions rounded-2xl shadow-2xl">
+            <div className="hero__introduce__actions rounded-2xl shadow-2xl">
                 <ul className="list-none navigation__menu category__menu">
                     <li className='navigation__menu__item active pb-3 inline-block mr-10 text-[14px] font-bold cursor-pointer hover:text-green-400'>Stays</li>
                     <li className='navigation__menu__item pb-3 inline-block mr-10 text-[14px] font-bold cursor-pointer hover:text-green-400'>Flights</li>
                     <li className='navigation__menu__item pb-3 inline-block mr-10 text-[14px] font-bold cursor-pointer hover:text-green-400'>Cars</li>
                     <li className='navigation__menu__item pb-3 inline-block mr-10 text-[14px] font-bold cursor-pointer hover:text-green-400'>Things to do</li>
                 </ul>
-                <div className="home__introduce__actions__menu my-10 flex items-center justify-between">
+                <div className="hero__introduce__actions__menu my-10 flex items-center justify-between">
                     <div className="mx-3 flex items-start">
                         <CiLocationArrow1 className='mr-3 mt-1 text-gray-600' />
                         <h2 className='font-bold'>
@@ -74,4 +74,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default HeroBanner

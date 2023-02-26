@@ -1,9 +1,9 @@
-import HomePage from "@/components/home";
+import HeroBanner from "@/components/hero";
 
 export default function Home() {
     return (
         <main>
-            <HomePage />
+            <HeroBanner />
         </main>
     )
 }

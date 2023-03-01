@@ -15,7 +15,9 @@ export default function RootLayout({
             <head />
             <body className="md:container m-auto">
                 <Navigation />
-                {children}
+                <div className="pt-20">
+                    {children}
+                </div>
             </body>
         </html>
     )

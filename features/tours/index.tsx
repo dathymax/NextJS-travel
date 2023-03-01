@@ -10,7 +10,7 @@ type PropsTypes = {
 
 const TourPage = ({ tourList }: PropsTypes) => {
     return (
-        <section className='bg-gray-100 rounded-2xl p-14'>
+        <section className='bg-slate-200 rounded-2xl p-14'>
             <div className="tour-page__heading mb-12">
                 <h2 className='font-bold text-4xl mb-2'>Go somewhere</h2>
                 <p className='text-gray-600 text-xl'>Let's go on an adventure</p>
@@ -18,19 +18,19 @@ const TourPage = ({ tourList }: PropsTypes) => {
 
             <div className="tour-page__categories mb-10 flex items-center justify-between">
                 <ul className="list-none">
-                    <li className='tour-page__categories-item active text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
+                    <li className='tour-page__categories-item cursor-pointer active text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
                         <AiOutlineDollarCircle className='mr-2' />
                         Featured
                     </li>
-                    <li className='tour-page__categories-item text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
+                    <li className='tour-page__categories-item cursor-pointer text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
                         <AiOutlineDollarCircle className='mr-2' />
                         Family-friendly
                     </li>
-                    <li className='tour-page__categories-item text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
+                    <li className='tour-page__categories-item cursor-pointer text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
                         <AiOutlineDollarCircle className='mr-2' />
                         On sale
                     </li>
-                    <li className='tour-page__categories-item text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
+                    <li className='tour-page__categories-item cursor-pointer text-gray-600 inline-flex items-center px-2 py-[1.] mr-5 rounded-xl'>
                         <AiOutlineDollarCircle className='mr-2' />
                         Sub nav
                     </li>

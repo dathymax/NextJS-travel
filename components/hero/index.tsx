@@ -17,7 +17,7 @@ const HeroBanner = () => {
                 <p className='mt-2'>
                     Find and book a great experience.
                 </p>
-                <p className='mt-2 transition-all bg-transparent border-white border-2 w-[60%] text-center rounded-3xl p-2 cursor-pointer hover:bg-white hover:text-black'>
+                <p className='mt-2 transition-all bg-white text-black border-white border-2 w-[40%] text-center rounded-xl p-2 cursor-pointer hover:bg-black hover:text-white'>
                     Start your search
                 </p>
             </div>

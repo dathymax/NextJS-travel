@@ -1,0 +1,100 @@
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 80px;
+	flex-direction: column;
+	background: #f8f8f8;
+}
+
+footer .container {
+	max-width: var(--max-width);
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 30px;
+	padding: 50px 30px 30px 30px;
+}
+
+footer .box strong {
+	color: var(--main);
+	font-size: 1.6rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+footer .box p {
+	color: var(--secondary);
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	margin-bottom: 15px;
+}
+
+footer .social {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+footer .social a {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	border: 1px solid var(--border-color);
+	color: var(--primary);
+	transition: all ease 0.3s;
+}
+
+footer .social a:hover {
+	background: var(--primary);
+	color: #fff;
+}
+
+footer .box ul {
+	color: var(--secondary);
+	margin: 5px 0;
+	font-size: 0.9rem;
+	letter-spacing: 1px;
+	transition: all ease 0.3s;
+}
+
+footer .box ul li a {
+	color: var(--secondary);
+	text-transform: capitalize;
+	font-size: 0.9rem;
+	margin: 5px 0;
+	transition: all ease 0.3s;
+}
+
+footer .box ul li a:hover {
+	color: var(--primary);
+}
+
+footer .box span {
+	display: block;
+	color: var(--secondary);
+	margin: 6px 0;
+	font-size: 0.9rem;
+}
+
+footer .box span i {
+	color: var(--primary);
+	margin-right: 6px;
+}
+
+footer .copyright {
+	width: 100%;
+	text-align: center;
+	padding: 15px;
+	font-size: 0.8rem;
+	color: var(--main);
+	font-weight: 400;
+	letter-spacing: 1px;
+	background: #ececec;
+}

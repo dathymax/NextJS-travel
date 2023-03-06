@@ -1,0 +1,29 @@
+.hero {
+	&__introduce {
+		position: relative;
+
+		&__title {
+			position: absolute;
+			width: 50vh;
+			top: 20%;
+			left: 5%;
+			z-index: 1;
+		}
+
+		&__actions {
+			position: absolute;
+			width: 70%;
+			padding: 15px 20px 10px 20px;
+			bottom: 15%;
+			left: 15%;
+			background: rgb(238, 255, 241);
+			background: linear-gradient(
+				90deg,
+				rgba(238, 255, 241, 1) 0%,
+				rgba(233, 255, 240, 1) 33%,
+				rgba(239, 255, 241, 1) 70%
+			);
+			z-index: 1;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+.theme {
+	width: 55px;
+	height: 55px;
+	background: #fff;
+	position: fixed;
+	bottom: 50px;
+	right: 10px;
+	z-index: 10;
+	padding: 15px 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	box-shadow: -20px 2px 25px var(--shadow-color);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+
+.theme:hover {
+	width: auto;
+	height: auto;
+	border-radius: 5px;
+	gap: 10px;
+}
+
+.theme button {
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	transform: scale(0.9);
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+
+.theme:hover button {
+	border-radius: 50%;
+}
+
+.theme button:is(:hover, .active) {
+	transform: scale(1.1);
+}
+
+.theme .blue {
+	background: rgb(65, 134, 255);
+}
+
+.theme .green {
+	background: rgb(3, 170, 0);
+}
+
+.theme .orange {
+	background: rgb(255, 135, 75);
+}
+
+.theme .custom {
+	background: linear-gradient(28deg, blue, red, green);
+}

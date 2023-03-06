@@ -1,0 +1,82 @@
+#explore {
+	background: var(--bg-secondary);
+	width: 90%;
+	max-width: var(--max-width);
+	margin: var(--margin);
+	padding: 50px 15px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+#explore .heading {
+	width: 90%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#explore .wrapper {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 25px;
+}
+
+#explore .card {
+	width: 160px;
+	min-width: 160px;
+	background-color: #fff;
+	border-radius: 10px;
+	border: 1px solid var(--border-color);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 10px;
+	position: relative;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+
+#explore .card:hover {
+	box-shadow: 2px 20px 30px var(--shadow-color);
+}
+
+#explore .card img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+#explore .card a {
+	text-transform: capitalize;
+	font-weight: 600;
+	font-size: 0.95rem;
+	color: var(--main);
+}
+
+#explore .card p {
+	font-size: 0.7rem;
+	color: var(--secondary);
+}
+
+#explore .card span {
+	background: var(--bg-secondary);
+	width: 55px;
+	height: 25px;
+	border-radius: 5px;
+	font-size: 0.6rem;
+	font-weight: 500;
+	text-align: center;
+	line-height: 25px;
+	color: var(--secondary);
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}

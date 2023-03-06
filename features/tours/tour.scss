@@ -1,0 +1,16 @@
+.tour-page {
+	&__heading {
+		margin-bottom: 30px;
+	}
+
+	&__categories {
+		&-item {
+			font-size: 13px;
+
+			&.active {
+				background-color: black;
+				color: white;
+			}
+		}
+	}
+}

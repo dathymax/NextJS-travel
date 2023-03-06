@@ -1,0 +1,87 @@
+#search {
+	width: 90%;
+	max-width: var(--max-width-sm);
+	text-align: center;
+	margin: var(--margin);
+}
+
+#search strong {
+	display: block;
+	color: var(--primary);
+	margin-bottom: 5px;
+}
+
+#search form {
+	width: 100%;
+	margin: 30px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 15px;
+	padding: 30px 20px;
+	border-radius: 15px;
+	background: var(--bg-main);
+	box-shadow: 2px 20px 30px var(--shadow-color);
+}
+
+#search .box {
+	flex: 4;
+	min-width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+#search .icon {
+	width: 50px;
+	min-width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #666;
+	background: var(--bg-secondary);
+	border-radius: 50%;
+}
+
+#search .input {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-width: 150px;
+}
+
+#search .input label {
+	font-weight: 500;
+	font-size: 0.9rem;
+	color: #666;
+	margin-bottom: 4px;
+	text-align: left;
+}
+
+#search .input input {
+	padding: 5px 10px;
+	background: var(--bg-secondary);
+	width: 100%;
+}
+
+#search button {
+	flex: 1;
+	width: 100%;
+	min-width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	background: var(--primary);
+	color: #fff;
+	cursor: pointer;
+	box-shadow: 2px 20px 30px var(--shadow-color);
+	transition: all ease 0.3s;
+}
+
+#search button:hover {
+	box-shadow: 2px 20px 30px var(--shadow-color-hover);
+}

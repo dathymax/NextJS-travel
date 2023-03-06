@@ -1,9 +1,17 @@
+import Footer from '@/components/footer';
 import Navigation from '@/components/navigation/Navigation';
 import './globals.css'
+import { Poppins } from "next/font/google";
+
+const inter = Poppins({
+    weight: ["300", "400", "500", "600", "700", "800"],
+    style: ["normal"],
+    subsets: ["latin"]
+})
 
 export const metadata = {
-    title: 'Travel Social Network',
-    description: 'Travel Social Network',
+    title: 'Travel template',
+    description: 'Travel template',
 }
 
 export default function RootLayout({
@@ -13,18 +21,16 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
             <head>
                 <meta content="width=device-width, initial-scale=1" name="viewport" />
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossOrigin="anonymous" referrerPolicy="no-referrer" />
             </head>
-            <body className="md:container m-auto">
+            <body className={`${inter.className} md:container m-auto`}>
                 <Navigation />
                 <div className="pt-20">
                     {children}
                 </div>
+                <Footer />
             </body>
         </html>
     )

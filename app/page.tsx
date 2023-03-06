@@ -1,4 +1,10 @@
+import Destinations from "@/components/destinations";
 import HeroBanner from "@/components/hero";
+import NearBy from "@/components/nearby";
+import Search from "@/components/search";
+import Subscribe from "@/components/subscribe";
+import Testimonials from "@/components/testimonials";
+import Trending from "@/components/trending";
 import TourPage from "@/features/tours";
 
 export async function getTours() {
@@ -25,7 +31,13 @@ export default async function Home() {
     return (
         <main>
             <HeroBanner />
+            <Search />
             <TourPage tourList={tourList} />
+            <Trending />
+            <Destinations />
+            <NearBy />
+            <Testimonials />
+            <Subscribe />
         </main>
     )
 }

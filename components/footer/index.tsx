@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
 
                 <div className="box">
                     <strong>Contact</strong>
-                    <span><i className="fas fa-map-marker-alt"></i>Nha Trang, VN</span>
+                    <span><i className="fas fa-map-marker-alt"></i>Hà Nội, VN</span>
                     <span><i className="fas fa-envelope"></i>Example@gmail.com</span>
                     <span><i className="fas fa-phone-square-alt"></i>098.76.54.321</span>
                 </div>

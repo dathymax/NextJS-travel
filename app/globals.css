@@ -32,6 +32,10 @@
 	scroll-behavior: smooth;
 }
 
+html {
+	overflow: hidden auto !important;
+}
+
 body {
 	width: 100%;
 	background: var(--bg-main);

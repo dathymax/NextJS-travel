@@ -1,12 +1,12 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { TfiWorld } from "react-icons/tfi"
 import { AiOutlineBell } from "react-icons/ai"
 import AvatarMock from '@/assets/mock/avatar.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
-import "./navigation.scss"
+import "./header.scss"
 import { usePathname } from 'next/navigation';
 
 const Navigation = () => {
@@ -22,7 +22,10 @@ const Navigation = () => {
         }
     };
 
-    window.addEventListener("scroll", changeBackgroundNav);
+    useEffect(() => {
+        window.addEventListener("scroll", changeBackgroundNav);
+    }, [])
+
 
     return (
         <div className={`${navBar ? "navigation bg-white shadow-lg" : "navigation"} fixed z-10 left-0 right-0`}>
@@ -66,9 +69,9 @@ const Navigation = () => {
                     {userId
                         ? <Image src={AvatarMock} alt="Avatar" className='rounded-full object-cover w-[40px] h-[40px] mx-5 cursor-pointer' />
                         : <div className='mx-5 flex items-center'>
-                            <div className="cursor-pointer bg-black text-white rounded-3xl hover:opacity-80 px-3 py-2">
+                            <Link href={"/login"} className="cursor-pointer bg-black text-white rounded-3xl hover:opacity-80 px-3 py-2">
                                 Login
-                            </div>
+                            </Link>
                             <div className="cursor-pointer bg-orange-600 text-white rounded-3xl ml-4 hover:opacity-80 px-3 py-2">
                                 Register
                             </div>

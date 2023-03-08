@@ -7,16 +7,18 @@ import { AiOutlineBell } from "react-icons/ai"
 import AvatarMock from '@/assets/mock/avatar.jpg';
 import Image from 'next/image';
 import "./header.scss";
+import { usePathname } from 'next/navigation';
 
 const categories = [
     { name: "home", link: "/" },
     { name: "about", link: "/about" },
     { name: "destinations", link: "/destinations" },
     { name: "tours", link: "/tours" },
-    { name: "blog", link: "/blog" },
+    { name: "blogs", link: "/blogs" },
 ]
 
 const Header = () => {
+    const pathname = usePathname();
     const [userId, setUserId] = useState(0);
     const [visible, setVisible] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
@@ -59,7 +61,7 @@ const Header = () => {
                     {
                         categories.map(category => {
                             return (
-                                <li key={category.name} className="navigation__menu__item">
+                                <li key={category.name} className={`navigation__menu__item ${pathname === category.link ? "active" : ""}`}>
                                     <Link href={category.link}>
                                         {category.name}
                                     </Link>

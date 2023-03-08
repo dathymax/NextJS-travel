@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import "./theme.css"
+import "./theme.scss"
 
 const colors = [
     { name: "custom", rgb: "custom" },

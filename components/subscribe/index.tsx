@@ -1,5 +1,5 @@
 import React from 'react'
-import "./subscribe.css"
+import "./subscribe.scss"
 import Image from 'next/image'
 
 const Subscribe: React.FC = () => {

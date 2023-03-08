@@ -1,5 +1,5 @@
 import React from 'react'
-import "./nearby.css"
+import "./nearby.scss"
 import Image from "next/image"
 import { ExploreTypes } from '@/types'
 

@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import "./trending.css"
+import "./trending.scss"
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

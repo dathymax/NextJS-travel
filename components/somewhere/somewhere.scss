@@ -1,4 +1,8 @@
 .tour-page {
+	width: 90%;
+	max-width: var(--max-width);
+	margin: var(--margin);
+
 	&__heading {
 		margin-bottom: 30px;
 	}
@@ -8,7 +12,7 @@
 			font-size: 13px;
 
 			&.active {
-				background-color: black;
+				background-color: var(--primary);
 				color: white;
 			}
 		}

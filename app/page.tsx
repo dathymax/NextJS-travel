@@ -5,7 +5,7 @@ import Search from "@/components/search";
 import Subscribe from "@/components/subscribe";
 import Testimonials from "@/components/testimonials";
 import Trending from "@/components/trending";
-import TourPage from "@/features/tours";
+import SomeWhere from "@/components/somewhere";
 
 export async function getTours() {
     const tourList = [
@@ -32,7 +32,7 @@ export default async function Home() {
         <main>
             <HeroBanner />
             <Search />
-            <TourPage tourList={tourList} />
+            <SomeWhere tourList={tourList} />
             <Trending />
             <Destinations />
             <NearBy />

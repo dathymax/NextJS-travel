@@ -8,20 +8,20 @@ import "./hero.scss";
 
 const HeroBanner = () => {
     return (
-        <div className='hero__introduce h-screen'>
-            <Image src={Background} alt="Background" className='hero__introduce__hero w-full h-[80vh] rounded-2xl saturate-50 drop-shadow-2xl' />
+        <div className='hero__introduce h-[80vh]'>
+            <Image src={Background} alt="Background" className='hero__introduce__hero w-full rounded-2xl saturate-50 drop-shadow-2xl' />
             <div className="hero__introduce__title text-white">
-                <h2 className="font-bold text-7xl">
+                <h2 className="text-7xl !text-white">
                     Air, sleep, dream
                 </h2>
-                <p className='mt-2'>
+                <p className='mt-2 !text-white'>
                     Find and book a great experience.
                 </p>
-                <p className='mt-2 transition-all bg-white text-black border-white border-2 w-[40%] text-center rounded-xl p-2 cursor-pointer hover:bg-black hover:text-white'>
+                <p className='primary--hover--bg mt-2 transition-all bg-white text-black border-white border-2 w-[40%] text-center rounded-xl p-2 cursor-pointer'>
                     Start your search
                 </p>
             </div>
-            <div className="hero__introduce__actions rounded-2xl shadow-2xl">
+            {/* <div className="hero__introduce__actions rounded-2xl shadow-2xl">
                 <ul className="list-none navigation__menu category__menu">
                     <li className='navigation__menu__item active pb-3 inline-block mr-10 text-[14px] font-bold cursor-pointer hover:text-green-400'>Stays</li>
                     <li className='navigation__menu__item pb-3 inline-block mr-10 text-[14px] font-bold cursor-pointer hover:text-green-400'>Flights</li>
@@ -69,7 +69,7 @@ const HeroBanner = () => {
                         <BsSearch className='text-xl' />
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

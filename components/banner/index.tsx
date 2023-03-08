@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Pagination } from "swiper";
-import "./banner.css"
+import "./banner.scss"
 import Image from 'next/image';
 
 const images: string[] = [

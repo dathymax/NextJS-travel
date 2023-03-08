@@ -1,8 +1,9 @@
 import Footer from '@/components/footer';
-import Navigation from '@/components/header';
-import './globals.css'
+import './globals.scss'
+import './common.scss'
 import { Poppins } from "next/font/google";
 import Theme from '@/components/theme';
+import Header from '@/components/header';
 
 const inter = Poppins({
     weight: ["300", "400", "500", "600", "700", "800"],
@@ -28,7 +29,7 @@ export default function RootLayout({
             </head>
             <body className={`${inter.className} md:container m-auto`}>
                 <Theme />
-                <Navigation />
+                <Header />
                 <div className="pt-20">
                     {children}
                 </div>

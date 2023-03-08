@@ -1,7 +1,7 @@
 import { DestinationTypes } from '@/types'
 import Image from 'next/image'
 import React from 'react'
-import "./destinations.css"
+import "./destinations.scss"
 
 const destinations: DestinationTypes[] = [
     {

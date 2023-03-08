@@ -5,7 +5,7 @@
 		&__title {
 			position: absolute;
 			width: 50vh;
-			top: 20%;
+			top: 30%;
 			left: 5%;
 			z-index: 1;
 		}
@@ -16,13 +16,7 @@
 			padding: 15px 20px 10px 20px;
 			bottom: 15%;
 			left: 15%;
-			background: rgb(238, 255, 241);
-			background: linear-gradient(
-				90deg,
-				rgba(238, 255, 241, 1) 0%,
-				rgba(233, 255, 240, 1) 33%,
-				rgba(239, 255, 241, 1) 70%
-			);
+			background: white;
 			z-index: 1;
 		}
 	}

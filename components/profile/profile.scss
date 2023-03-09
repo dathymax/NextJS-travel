@@ -1,0 +1,49 @@
+.user {
+	&__wallpaper {
+		position: relative;
+		z-index: -1;
+	}
+
+	&__body {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding-top: 50px;
+		gap: 100px;
+		z-index: 2;
+	}
+
+	.profile {
+		border: 1px solid lightgray;
+		border-radius: 10px;
+		background: var(--bg-main);
+		padding: 20px;
+		text-align: center;
+		margin-top: -13%;
+
+		&__contact {
+			border: 2px solid var(--primary);
+			border-radius: 30px;
+		}
+	}
+
+	&__wrapper {
+		.heading {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			&__welcome {
+				font-size: 1.5rem;
+				font-weight: 600;
+			}
+
+			&__edit {
+				border: 1px solid var(--primary);
+				padding: 5px 15px;
+				border-radius: 20px;
+			}
+		}
+	}
+}

@@ -1,8 +1,13 @@
+import Destinations from '@/components/destinations'
+import NearBy from '@/components/nearby'
 import React from 'react'
 
 const DestinationsPage = () => {
     return (
-        <div>DestinationsPage</div>
+        <div>
+            <Destinations />
+            <NearBy />
+        </div>
     )
 }
 

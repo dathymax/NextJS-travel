@@ -1,8 +1,11 @@
+import Subscribe from '@/components/subscribe'
 import React from 'react'
 
 const AboutPage = () => {
     return (
-        <div>AboutPage</div>
+        <div>
+            <Subscribe />
+        </div>
     )
 }
 

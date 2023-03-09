@@ -1,7 +1,7 @@
 import UserProfile from '@/components/profile'
 import React from 'react'
 
-const HostProfilePage = () => {
+const UserProfilePage = () => {
     return (
         <div>
             <UserProfile />
@@ -9,4 +9,4 @@ const HostProfilePage = () => {
     )
 }
 
-export default HostProfilePage
+export default UserProfilePage

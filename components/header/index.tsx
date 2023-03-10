@@ -4,10 +4,10 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react'
 import { TfiWorld } from "react-icons/tfi"
 import { AiOutlineBell } from "react-icons/ai"
-import AvatarMock from '@/assets/mock/avatar.jpg';
-import Image from 'next/image';
+
 import "./header.scss";
 import { usePathname } from 'next/navigation';
+import User from './user';
 
 const categories = [
     { name: "home", link: "/" },
@@ -19,7 +19,7 @@ const categories = [
 
 const Header = () => {
     const pathname = usePathname();
-    const [userId, setUserId] = useState(0);
+    const [userId, setUserId] = useState(1);
     const [visible, setVisible] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
 
@@ -75,12 +75,12 @@ const Header = () => {
                     <TfiWorld className="primary--hover flex items-center justify-center mr-5" />
                     <AiOutlineBell className='primary--hover text-xl cursor-pointer' />
                     {userId
-                        ? <Image src={AvatarMock} alt="Avatar" className='rounded-full object-cover w-[40px] h-[40px] mx-5 cursor-pointer' />
+                        ? <User />
                         : <div className='mx-5 flex items-center'>
-                            <div className="text-[var(--secondary)] primary--hover font-medium cursor-pointer rounded-3xl px-2">
+                            <div className="login text-[var(--secondary)] primary--hover--bg font-medium cursor-pointer rounded-3xl px-3 py-1">
                                 Login
                             </div>
-                            <div className="cursor-pointer bg-[var(--primary)] text-white rounded-3xl ml-4 hover:opacity-80 px-3 py-1">
+                            <div className="register cursor-pointer bg-[var(--primary)] text-white rounded-3xl ml-4 hover:opacity-80 px-3 py-1">
                                 Register
                             </div>
                         </div>}

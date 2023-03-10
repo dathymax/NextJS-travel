@@ -43,6 +43,14 @@ header {
 			}
 		}
 	}
+
+	.login {
+		border: 1px solid var(--primary);
+	}
+
+	.register {
+		transition: all ease 0.3s;
+	}
 }
 
 header {

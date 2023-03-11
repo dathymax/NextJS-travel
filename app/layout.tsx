@@ -12,8 +12,8 @@ const inter = Poppins({
 })
 
 export const metadata = {
-    title: 'Travel template',
-    description: 'Travel template',
+    title: 'Travel social',
+    description: 'Travel social',
 }
 
 export default function RootLayout({

@@ -2,12 +2,11 @@
 
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react'
-import { TfiWorld } from "react-icons/tfi"
-import { AiOutlineBell } from "react-icons/ai"
-
 import "./header.scss";
 import { usePathname } from 'next/navigation';
 import User from './user';
+import Notification from './notification';
+import Language from './language';
 
 const categories = [
     { name: "home", link: "/" },
@@ -72,8 +71,8 @@ const Header = () => {
                 </ul>
 
                 <div className='navigation__user-actions flex items-center cursor-pointer'>
-                    <TfiWorld className="primary--hover flex items-center justify-center mr-5" />
-                    <AiOutlineBell className='primary--hover text-xl cursor-pointer' />
+                    <Language />
+                    <Notification />
                     {userId
                         ? <User />
                         : <div className='mx-5 flex items-center'>

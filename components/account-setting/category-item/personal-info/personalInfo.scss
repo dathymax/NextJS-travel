@@ -1,0 +1,56 @@
+.information,
+.login__feature {
+	transition: all ease 0.3s;
+
+	.heading {
+		&__link {
+			padding: 7px 10px;
+			border: 1px solid var(--primary);
+			border-radius: 20px;
+			font-size: 0.9rem;
+			font-weight: 600;
+		}
+	}
+
+	&__form p {
+		font-size: 1.3rem;
+		font-weight: 600;
+		color: black;
+	}
+
+	&__form input,
+	&__form textarea {
+		border: 2px solid rgb(235, 235, 235);
+		padding: 10px 20px;
+		border-radius: 10px;
+	}
+
+	&__form input::placeholder,
+	&__form textarea::placeholder {
+		font-size: 0.9rem;
+	}
+
+	&__form label {
+		font-size: 0.9rem;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: rgb(172, 170, 170);
+		margin-bottom: 10px;
+	}
+
+	.form {
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+}

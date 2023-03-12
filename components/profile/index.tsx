@@ -9,7 +9,7 @@ import { RiFacebookCircleLine } from "react-icons/ri"
 import Link from 'next/link';
 import { RxTwitterLogo } from "react-icons/rx"
 
-const UserProfile = () => {
+const UserProfile: React.FC = () => {
     return (
         <div className='user'>
             <div className="user__wallpaper h-[40vh]">

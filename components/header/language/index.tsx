@@ -17,7 +17,7 @@ const languages = [
     },
 ] as { key: string, label: string, flag: string }[]
 
-const Language = () => {
+const Language: React.FC = () => {
     return (
         <div className='language'>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">

@@ -6,7 +6,7 @@ type PropsType = {
     tour: TourTypes
 }
 
-const SomeWhereItem = ({ tour }: PropsType) => {
+const SomeWhereItem: React.FC<PropsType> = ({ tour }: PropsType) => {
     return (
         <div>
             <Image src={tour.image} alt={tour.city} width={100} height={300} className="w-[100px] h-[300px] rounded-lg" />

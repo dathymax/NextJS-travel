@@ -35,7 +35,7 @@ const notifications = [
     },
 ] as { id: number, label: string, author: string, avatar: string, content: string }[]
 
-const Notification = () => {
+const Notification: React.FC = () => {
     return (
         <div className='notification'>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">

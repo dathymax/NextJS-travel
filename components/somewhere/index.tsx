@@ -8,7 +8,7 @@ type PropsTypes = {
     tourList: TourTypes[]
 }
 
-const SomeWhere = ({ tourList }: PropsTypes) => {
+const SomeWhere: React.FC<PropsTypes> = ({ tourList }: PropsTypes) => {
     return (
         <section className='tour-page bg-slate-200 rounded-2xl p-14'>
             <div className="tour-page__heading mb-12">

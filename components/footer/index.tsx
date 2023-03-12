@@ -4,7 +4,7 @@ import './footer.scss'
 const Footer: React.FC = () => {
     return (
         <footer>
-            <div className="container">
+            <div className="footer-container">
                 <div className="box">
                     <strong>Travel</strong>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, at?</p>

@@ -13,7 +13,7 @@ const links = [
     { href: '/sign-out', label: 'Sign out' },
 ] as { href: string, label: string }[]
 
-const User = () => {
+const User: React.FC = () => {
     return (
         <div className='user'>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">

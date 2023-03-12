@@ -6,7 +6,7 @@ import { BsSearch, BsCalendar2Event } from 'react-icons/bs';
 import { AiOutlineUser } from "react-icons/ai";
 import "./hero.scss";
 
-const HeroBanner = () => {
+const HeroBanner: React.FC = () => {
     return (
         <div className='hero__introduce h-[80vh]'>
             <Image src={Background} alt="Background" className='hero__introduce__hero w-full rounded-2xl saturate-50 drop-shadow-2xl' />

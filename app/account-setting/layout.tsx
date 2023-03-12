@@ -1,3 +1,5 @@
+import "./index.scss"
+
 export const metadata = {
     title: 'Account setting',
     description: 'Account setting',

@@ -16,7 +16,7 @@ const categories = [
     { name: "blogs", link: "/blogs" },
 ]
 
-const Header = () => {
+const Header: React.FC = () => {
     const pathname = usePathname();
     const [userId, setUserId] = useState(1);
     const [visible, setVisible] = useState(false);

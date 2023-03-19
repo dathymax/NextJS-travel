@@ -1,11 +1,12 @@
-import Destinations from "@/components/destinations";
-import HeroBanner from "@/components/hero";
-import NearBy from "@/components/nearby";
-import Search from "@/components/search";
-import Subscribe from "@/components/subscribe";
-import Testimonials from "@/components/testimonials";
-import Trending from "@/components/trending";
-import SomeWhere from "@/components/somewhere";
+import Search from "@/components/features/search";
+import HeroBanner from "@/components/layouts/hero";
+import Destinations from "@/components/sections/destinations";
+import NearBy from "@/components/sections/nearby";
+import SomeWhere from "@/components/sections/somewhere";
+import Subscribe from "@/components/sections/subscribe";
+import Testimonials from "@/components/sections/testimonials";
+import Trending from "@/components/sections/trending";
+
 
 export async function getTours() {
     const tourList = [

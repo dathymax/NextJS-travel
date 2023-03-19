@@ -1,4 +1,4 @@
-import Subscribe from '@/components/subscribe'
+import Subscribe from '@/components/sections/subscribe'
 import React from 'react'
 
 const AboutPage = () => {

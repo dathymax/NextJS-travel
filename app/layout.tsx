@@ -1,8 +1,8 @@
-import Footer from '@/components/footer';
 import './globals.scss'
 import './common.scss'
-import Theme from '@/components/theme';
-import Header from '@/components/header';
+import Theme from '@/components/layouts/theme'
+import Header from '@/components/layouts/header'
+import Footer from '@/components/layouts/footer'
 
 export const metadata = {
     title: 'Travel social',

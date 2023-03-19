@@ -1,5 +1,5 @@
-import Destinations from '@/components/destinations'
-import NearBy from '@/components/nearby'
+import Destinations from '@/components/sections/destinations'
+import NearBy from '@/components/sections/nearby'
 import React from 'react'
 
 const DestinationsPage = () => {

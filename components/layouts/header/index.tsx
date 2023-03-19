@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import User from './user';
 import Notification from './notification';
 import Language from './language';
+import LoginForm from '@/components/user-actions/login';
 
 const categories = [
     { name: "home", link: "/" },
@@ -18,11 +19,12 @@ const categories = [
 
 const Header: React.FC = () => {
     const pathname = usePathname();
-    const [userId, setUserId] = useState(1);
+    const [userId, setUserId] = useState(0);
     const [visible, setVisible] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
+    const [showLogin, setShowLogin] = useState<boolean>(false);
 
-    const toggleVisible = () => {
+    const toggleVisible = (): void => {
         const scrolled = document.documentElement.scrollTop;
 
         if (scrolled > 0) {
@@ -39,6 +41,10 @@ const Header: React.FC = () => {
             window.removeEventListener("scroll", toggleVisible)
         }
     }, [])
+
+    const handleShowLoginForm = (): void => {
+        setShowLogin(prev => !prev)
+    }
 
     return (
         <header
@@ -76,15 +82,14 @@ const Header: React.FC = () => {
                     {userId
                         ? <User />
                         : <div className='mx-5 flex items-center'>
-                            <div className="login text-[var(--secondary)] primary--hover--bg font-medium cursor-pointer rounded-3xl px-3 py-1">
-                                Login
-                            </div>
-                            <div className="register cursor-pointer bg-[var(--primary)] text-white rounded-3xl ml-4 hover:opacity-80 px-3 py-1">
-                                Register
+                            <div className="register cursor-pointer bg-[var(--primary)] text-white rounded-3xl ml-4 hover:opacity-80 px-3 py-1" onClick={handleShowLoginForm}>
+                                Join us
                             </div>
                         </div>}
                 </div>
             </nav>
+
+            <LoginForm visible={showLogin} />
         </header>
     )
 }

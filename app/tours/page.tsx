@@ -1,5 +1,5 @@
-import SomeWhere from '@/components/somewhere'
-import Trending from '@/components/trending'
+import SomeWhere from '@/components/sections/somewhere';
+import Trending from '@/components/sections/trending';
 import React from 'react'
 
 export async function getTours() {

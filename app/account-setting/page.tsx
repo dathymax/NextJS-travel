@@ -1,4 +1,4 @@
-import AccountSetting from '@/components/account-setting'
+import AccountSetting from '@/components/features/account-setting'
 import React from 'react'
 
 const AccountSettingPage = () => {

@@ -89,7 +89,7 @@ const Header: React.FC = () => {
                 </div>
             </nav>
 
-            <LoginForm visible={showLogin} />
+            <LoginForm visible={showLogin} setVisible={setShowLogin} />
         </header>
     )
 }

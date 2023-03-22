@@ -1,13 +1,20 @@
-.login {
-	&__container {
+.login,
+.register {
+	transition: all ease 0.3s;
+
+	&__feature {
 		position: relative;
+		transition: all ease 0.3s;
 
 		form {
 			position: fixed;
 			top: 50%;
 			left: 50%;
+			transition: all ease 0.3s;
 			transform: translate(-50%, -50%);
 			background: white;
+			overflow: hidden;
+			width: 400px;
 			z-index: 2;
 		}
 	}
@@ -22,6 +29,42 @@
 		width: 100vw;
 		height: 100vh;
 		z-index: 1;
+		transition: all ease 0.3s;
 		opacity: 0.4;
+	}
+
+	&__form {
+		background-color: white;
+		padding: 20px;
+
+		&--heading {
+			font-weight: 600;
+			font-size: 2rem;
+			text-align: center;
+			line-height: 1.3rem;
+			margin-bottom: 40px;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input {
+			border: 1px solid lightgray;
+			border-radius: 10px;
+			padding: 10px;
+			display: block;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+
+		input[type="submit"] {
+			font-size: 1.1rem;
+			line-height: 1.2rem;
+			letter-spacing: 1px;
+			color: white;
+			background-color: var(--primary);
+		}
 	}
 }

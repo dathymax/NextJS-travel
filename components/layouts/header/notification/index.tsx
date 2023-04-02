@@ -40,7 +40,7 @@ const Notification: React.FC = () => {
         <div className='notification'>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
                 <Popover className="relative">
-                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-transparent">
                         <AiOutlineBell className='primary--hover text-xl cursor-pointer' />
                     </Popover.Button>
 
@@ -56,8 +56,8 @@ const Notification: React.FC = () => {
                         <ul className="absolute -right-10 top-full z-10 mt-3 py-2 w-[400px] overflow-hidden rounded-xl bg-white shadow-xl ring-1 ring-gray-900/5">
                             {notifications.map(notification => {
                                 return (
-                                    <>
-                                        <li key={notification.id} className="flex gap-10 items-center justify-center py-2 primary--hover">
+                                    <React.Fragment key={notification.id}>
+                                        <li className="flex gap-10 items-center justify-center py-2 primary--hover">
                                             <div>
                                                 <Image
                                                     src={notification.avatar}
@@ -74,7 +74,7 @@ const Notification: React.FC = () => {
                                             </div>
                                         </li>
                                         <hr />
-                                    </>
+                                    </React.Fragment>
                                 )
                             })}
                         </ul>

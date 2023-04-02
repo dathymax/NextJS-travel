@@ -10,15 +10,19 @@ import "./user.scss"
 const links = [
     { href: '/user-profile', label: 'Profile' },
     { href: '/account-setting', label: 'Account setting' },
-    { href: '/sign-out', label: 'Sign out' },
 ] as { href: string, label: string }[]
 
 const User: React.FC = () => {
+
+    const handleLogOut = (): void => {
+        console.log("Logged out!")
+    }
+
     return (
         <div className='user'>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
                 <Popover className="relative">
-                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-transparent">
                         <Image
                             src={AvatarMock}
                             alt="Avatar"
@@ -45,6 +49,11 @@ const User: React.FC = () => {
                                     </li>
                                 )
                             })}
+                            <li onClick={handleLogOut}>
+                                <Link href={"#"}>
+                                    Sign out
+                                </Link>
+                            </li>
                         </ul>
                     </Transition>
                 </Popover>

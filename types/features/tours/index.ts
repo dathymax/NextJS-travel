@@ -1,4 +1,4 @@
-export type TourTypes = {
+export interface TourTypes {
     id: string | number
     city: string
     country: string

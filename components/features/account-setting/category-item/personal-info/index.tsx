@@ -1,8 +1,25 @@
+"use client"
+
+import { UserProfileType } from '@/types/features/user'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useForm } from 'react-hook-form'
 import "./personalInfo.scss"
 
-const PersonalInfo: React.FC = () => {
+type TypeProps = {
+    userInfo: UserProfileType
+}
+
+const PersonalInfo: React.FC<TypeProps> = ({ userInfo }: TypeProps) => {
+    const { setValue, register } = useForm<UserProfileType>({ defaultValues: userInfo });
+
+    useEffect(() => {
+        if (userInfo) {
+            setValue("displayName", userInfo.displayName)
+            setValue("realName", userInfo.realName)
+        }
+    }, [userInfo])
+
     return (
         <section className='information'>
             <div className="heading flex items-center justify-between mb-12">
@@ -16,18 +33,18 @@ const PersonalInfo: React.FC = () => {
                 <div className="form__wrapper">
                     <div className="form__item">
                         <label htmlFor="displayName">Display name</label>
-                        <input type="text" id='displayName' name="displayName" placeholder='Enter your display name' />
+                        <input type="text" id='displayName' placeholder='Enter your display name' {...register("displayName")} />
                     </div>
                     <div className="form__item">
                         <label htmlFor="realName">Real name</label>
-                        <input type="text" id='realName' name="realName" placeholder='Enter your real name' />
+                        <input type="text" id='realName' placeholder='Enter your real name' {...register("realName")} />
                     </div>
                 </div>
 
                 <div className="form__wrapper">
                     <div className="form__item">
-                        <label htmlFor="phoneNumber">Phone number</label>
-                        <input type="tel" id='phoneNumber' name="phoneNumber" placeholder='Enter your phone number' />
+                        <label htmlFor="phone">Phone number</label>
+                        <input type="tel" id='phone' name="phone" placeholder='Enter your phone number' />
                     </div>
                     <div className="form__item">
                         <label htmlFor="email">Email</label>
@@ -46,4 +63,4 @@ const PersonalInfo: React.FC = () => {
     )
 }
 
-export default PersonalInfo
+export default React.memo(PersonalInfo);

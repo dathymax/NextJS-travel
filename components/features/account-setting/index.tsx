@@ -6,6 +6,7 @@ import Notifications from './category-item/notifications'
 import Payments from './category-item/payments'
 import PersonalInfo from './category-item/personal-info'
 import { BiUser, BiLockAlt, BiBell, BiCreditCardAlt } from "react-icons/bi"
+import { UserProfileType } from '@/types/features/user'
 
 const categories = [
     {
@@ -34,7 +35,11 @@ const categories = [
     icon: ReactNode
 }[]
 
-const AccountSetting: React.FC = () => {
+type TypeProps = {
+    userInfo: UserProfileType
+}
+
+const AccountSetting: React.FC<TypeProps> = ({ userInfo }: TypeProps) => {
     const [activeKey, setActiveKey] = useState<string>("personalInfo");
 
     const onChangeActiveKey = (key: string) => {
@@ -44,7 +49,7 @@ const AccountSetting: React.FC = () => {
     function renderComponent() {
         switch (activeKey) {
             case "personalInfo":
-                return <PersonalInfo />
+                return <PersonalInfo userInfo={userInfo} />
             case "loginAndSecurity":
                 return <LoginAndSecurity />
             case "payments":

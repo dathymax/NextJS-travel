@@ -22,7 +22,7 @@ const Language: React.FC = () => {
         <div className='language'>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
                 <Popover className="relative">
-                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-transparent">
                         <TfiWorld className="primary--hover flex items-center justify-center mr-5" />
                     </Popover.Button>
 
@@ -38,8 +38,8 @@ const Language: React.FC = () => {
                         <ul className="absolute -right-2 top-full z-10 mt-3 py-2 w-[100px] overflow-hidden rounded-xl bg-white shadow-xl ring-1 ring-gray-900/5">
                             {languages.map(language => {
                                 return (
-                                    <>
-                                        <li key={language.key} className="flex gap-2 items-center justify-center py-2 primary--hover">
+                                    <React.Fragment key={language.key}>
+                                        <li className="flex gap-2 items-center justify-center py-2 primary--hover">
                                             <Image
                                                 src={language.flag}
                                                 alt={language.flag}
@@ -50,7 +50,7 @@ const Language: React.FC = () => {
                                             <p>{language.label}</p>
                                         </li>
                                         <hr />
-                                    </>
+                                    </React.Fragment>
                                 )
                             })}
                         </ul>

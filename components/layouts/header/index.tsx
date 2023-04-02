@@ -19,7 +19,7 @@ const categories = [
 
 const Header: React.FC = () => {
     const pathname = usePathname();
-    const [userId, setUserId] = useState(0);
+    const [userId, setUserId] = useState(1);
     const [visible, setVisible] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
     const [showLogin, setShowLogin] = useState<boolean>(false);

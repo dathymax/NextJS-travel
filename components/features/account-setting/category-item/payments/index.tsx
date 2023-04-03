@@ -63,11 +63,9 @@ const Payments: React.FC = () => {
                         </Col>
                     </Row>
 
-                    <CustomFormItem>
-                        <Checkbox>
-                            Save card
-                        </Checkbox>
-                    </CustomFormItem>
+                    <Checkbox>
+                        Save card
+                    </Checkbox>
                 </CustomForm>
 
                 <hr className='my-10' />

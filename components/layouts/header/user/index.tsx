@@ -43,7 +43,7 @@ const User: React.FC = () => {
                             {links.map(link => {
                                 return (
                                     <li key={link.href}>
-                                        <Link href={link.href}>
+                                        <Link href={link.href} className="w-full block">
                                             {link.label}
                                         </Link>
                                     </li>

@@ -22,7 +22,7 @@ const Language: React.FC = () => {
         <div className='language'>
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
                 <Popover className="relative">
-                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-transparent">
+                    <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 bg-transparent cursor-pointer">
                         <TfiWorld className="primary--hover flex items-center justify-center mr-5" />
                     </Popover.Button>
 

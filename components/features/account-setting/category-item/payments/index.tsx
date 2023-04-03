@@ -1,4 +1,7 @@
-import Checkbox from '@/common/checkbox'
+import Checkbox from '@/components/common/checkbox'
+import CustomForm from '@/components/custom/form/Form'
+import CustomFormItem from '@/components/custom/form/FormItem'
+import { Col, Input, Row } from 'antd'
 import React from 'react'
 
 const Payments: React.FC = () => {
@@ -6,7 +9,7 @@ const Payments: React.FC = () => {
         <section>
             <h2 className='mb-12'>Payment methods</h2>
 
-            <div className="login__feature mb-10">
+            <div className="payment mb-10">
                 <h3 className="heading">Credit card</h3>
                 <div className="flex items-center justify-between w-full">
                     <div className="label">
@@ -19,48 +22,58 @@ const Payments: React.FC = () => {
                 </div>
             </div>
 
-            <div className="login__feature mb-10">
+            <div className="payment mb-10">
                 <h3 className="heading mb-6">Add new credit card</h3>
 
-                <form className='information__form'>
-                    <div className="form__wrapper">
-                        <div className="form__item">
-                            <label htmlFor="displayName">Display name</label>
-                            <input type="text" id='displayName' name="displayName" placeholder='Enter your display name' />
-                        </div>
-                        <div className="form__item">
-                            <label htmlFor="realName">Real name</label>
-                            <input type="text" id='realName' name="realName" placeholder='Enter your real name' />
-                        </div>
-                    </div>
+                <CustomForm className='information__form'>
+                    <Row gutter={12} wrap>
+                        <Col span={24}>
+                            <CustomFormItem
+                                label="Card number"
+                                name="cardNumber"
+                            >
+                                <Input placeholder='XXX XXX XXX XXX' />
+                            </CustomFormItem>
+                        </Col>
 
-                    <div className="form__wrapper">
-                        <div className="form__item">
-                            <label htmlFor="phoneNumber">Phone number</label>
-                            <input type="tel" id='phoneNumber' name="phoneNumber" placeholder='Enter your phone number' />
-                        </div>
-                        <div className="form__item">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" id='email' name="email" placeholder='Enter your email' />
-                        </div>
-                    </div>
+                        <Col span={24}>
+                            <CustomFormItem
+                                label="Card holder"
+                                name="cardHolder"
+                            >
+                                <Input placeholder='XXX XXX XXX XXX' />
+                            </CustomFormItem>
+                        </Col>
 
-                    <div className="form__wrapper">
-                        <div className="form__item">
-                            <label htmlFor="bio">Bio</label>
-                            <input type="text" id='bio' name="bio" placeholder='About yourself in a few words' />
-                        </div>
-                    </div>
+                        <Col span={12}>
+                            <CustomFormItem
+                                label="EXPIRATION DATE"
+                                name="expirationDate"
+                            >
+                                <Input placeholder='MM/YY' />
+                            </CustomFormItem>
+                        </Col>
+                        <Col span={12}>
+                            <CustomFormItem
+                                label="CVC"
+                                name="cvc"
+                            >
+                                <Input placeholder='CVC' />
+                            </CustomFormItem>
+                        </Col>
+                    </Row>
 
-                    <Checkbox>
-                        Save card
-                    </Checkbox>
-                </form>
+                    <CustomFormItem>
+                        <Checkbox>
+                            Save card
+                        </Checkbox>
+                    </CustomFormItem>
+                </CustomForm>
 
                 <hr className='my-10' />
             </div>
 
-            <div className="login__feature">
+            <div className="payment">
                 <h3 className="heading">Coupons</h3>
                 <div className="flex items-center justify-between">
                     <div className="flex items-center justify-between w-full">

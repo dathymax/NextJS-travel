@@ -1,5 +1,5 @@
 .information,
-.login__feature {
+.payment {
 	transition: all ease 0.3s;
 
 	.heading {
@@ -35,7 +35,7 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		color: rgb(172, 170, 170);
-		margin-bottom: 10px;
+		// margin-bottom: 10px;
 	}
 
 	.form {
@@ -52,5 +52,13 @@
 			flex-direction: column;
 			width: 100%;
 		}
+	}
+
+	.feature {
+		border: 2px solid var(--primary);
+		padding: 7px 10px;
+		border-radius: 20px;
+		font-size: 0.8rem;
+		font-weight: 600;
 	}
 }

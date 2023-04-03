@@ -1,4 +1,4 @@
-import Radio from '@/common/radio'
+import Radio from '@/components/common/radio'
 import React from 'react'
 
 const Notifications: React.FC = () => {

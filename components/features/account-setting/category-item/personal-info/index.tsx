@@ -1,9 +1,11 @@
 "use client"
 
+import CustomForm from '@/components/custom/form/Form'
+import CustomFormItem from '@/components/custom/form/FormItem'
 import { UserProfileType } from '@/types/features/user'
+import { Col, Form, Input, Row } from 'antd'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
-import { useForm } from 'react-hook-form'
 import "./personalInfo.scss"
 
 type TypeProps = {
@@ -11,14 +13,17 @@ type TypeProps = {
 }
 
 const PersonalInfo: React.FC<TypeProps> = ({ userInfo }: TypeProps) => {
-    const { setValue, register } = useForm<UserProfileType>({ defaultValues: userInfo });
+    const [form] = Form.useForm();
 
     useEffect(() => {
         if (userInfo) {
-            setValue("displayName", userInfo.displayName)
-            setValue("realName", userInfo.realName)
+            form.setFieldsValue(userInfo);
         }
     }, [userInfo])
+
+    const onFinish = (values: UserProfileType) => {
+        console.log(values)
+    }
 
     return (
         <section className='information'>
@@ -27,17 +32,67 @@ const PersonalInfo: React.FC<TypeProps> = ({ userInfo }: TypeProps) => {
                 <Link href={"/user-profile"} className={"heading__link primary--hover--bg"}>View profile</Link>
             </div>
 
-            <form className='information__form'>
-                <p className='mb-6'>Account info</p>
+            <p className='mb-6 font-bold'>Account info</p>
 
+            <CustomForm
+                form={form}
+                onFinish={onFinish}
+            >
+                <Row gutter={12} wrap>
+                    <Col span={12}>
+                        <CustomFormItem
+                            label="Display name"
+                            name="displayName"
+                        >
+                            <Input />
+                        </CustomFormItem>
+                    </Col>
+                    <Col span={12}>
+                        <CustomFormItem
+                            label="Real name"
+                            name="realName"
+                        >
+                            <Input />
+                        </CustomFormItem>
+                    </Col>
+
+                    <Col span={12}>
+                        <CustomFormItem
+                            label="Phone number"
+                            name="phone"
+                        >
+                            <Input />
+                        </CustomFormItem>
+                    </Col>
+                    <Col span={12}>
+                        <CustomFormItem
+                            label="Email"
+                            name="email"
+                        >
+                            <Input />
+                        </CustomFormItem>
+                    </Col>
+
+                    <Col span={24}>
+                        <CustomFormItem
+                            label="Bio"
+                            name="bio"
+                        >
+                            <Input />
+                        </CustomFormItem>
+                    </Col>
+                </Row>
+            </CustomForm>
+
+            {/* <form className='information__form'>
                 <div className="form__wrapper">
                     <div className="form__item">
                         <label htmlFor="displayName">Display name</label>
-                        <input type="text" id='displayName' placeholder='Enter your display name' {...register("displayName")} />
+                        <input type="text" name="displayName" id='displayName' placeholder='Enter your display name' />
                     </div>
                     <div className="form__item">
                         <label htmlFor="realName">Real name</label>
-                        <input type="text" id='realName' placeholder='Enter your real name' {...register("realName")} />
+                        <input type="text" name="realName" id='realName' placeholder='Enter your real name' />
                     </div>
                 </div>
 
@@ -58,9 +113,9 @@ const PersonalInfo: React.FC<TypeProps> = ({ userInfo }: TypeProps) => {
                         <input type="text" id='bio' name="bio" placeholder='About yourself in a few words' />
                     </div>
                 </div>
-            </form>
+            </form> */}
         </section>
     )
 }
 
-export default React.memo(PersonalInfo);
+export default PersonalInfo;

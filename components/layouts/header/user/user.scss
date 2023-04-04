@@ -3,6 +3,10 @@
 }
 
 .user ul li {
+	margin: 0;
+}
+
+.user ul li a {
 	display: block;
 	font-size: 0.9rem;
 	padding: 10px 20px;
@@ -11,9 +15,4 @@
 	&:hover {
 		background: rgb(230, 228, 228);
 	}
-}
-
-.user ul li a {
-	display: block;
-	font-size: 0.9rem;
 }

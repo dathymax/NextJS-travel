@@ -6,22 +6,11 @@ import SomeWhere from "@/components/sections/somewhere";
 import Subscribe from "@/components/sections/subscribe";
 import Testimonials from "@/components/sections/testimonials";
 import Trending from "@/components/sections/trending";
+import tour from "@/mock/data/tour.json"
 
 
 export async function getTours() {
-    const tourList = [
-        {
-            id: 1,
-            country: "Viet Nam",
-            city: "Ha Noi",
-            price: 500000,
-            image: "/assets/mock/tour-image.jpg",
-            startDate: new Date(),
-            endDate: new Date(),
-            discount: 150000,
-            rate: 5
-        }
-    ];
+    const tourList = tour;
 
     return tourList;
 }

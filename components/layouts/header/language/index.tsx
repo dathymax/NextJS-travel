@@ -8,14 +8,16 @@ const languages = [
     {
         key: "EN",
         label: "EN",
-        flag: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
+        flag: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png",
+        isChoose: true
     },
     {
         key: "VI",
         label: "VI",
-        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2560px-Flag_of_Vietnam.svg.png"
+        flag: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2560px-Flag_of_Vietnam.svg.png",
+        isChoose: false
     },
-] as { key: string, label: string, flag: string }[]
+] as { key: string, label: string, flag: string, isChoose: boolean }[]
 
 const Language: React.FC = () => {
     return (
@@ -49,7 +51,6 @@ const Language: React.FC = () => {
                                             />
                                             <p>{language.label}</p>
                                         </li>
-                                        <hr />
                                     </React.Fragment>
                                 )
                             })}

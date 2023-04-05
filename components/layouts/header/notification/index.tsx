@@ -10,30 +10,34 @@ const notifications = [
         label: "Notify 1",
         author: "Jtadd1",
         avatar: "https://cdn.popsww.com/blog/sites/2/2022/02/zoro-sau-2-nam.jpg",
-        content: "Lorem ipsum, dolor sit amet consectetur adipisicing...."
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing....",
+        isRead: false
     },
     {
         id: 2,
         label: "Notify 2",
         author: "Jtadd2",
         avatar: "https://cdn.popsww.com/blog/sites/2/2022/02/zoro-sau-2-nam.jpg",
-        content: "Lorem ipsum, dolor sit amet consectetur adipisicing...."
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing....",
+        isRead: false
     },
     {
         id: 3,
         label: "Notify 3",
         author: "Jtadd3",
         avatar: "https://cdn.popsww.com/blog/sites/2/2022/02/zoro-sau-2-nam.jpg",
-        content: "Lorem ipsum, dolor sit amet consectetur adipisicing...."
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing....",
+        isRead: true
     },
     {
         id: 4,
         label: "Notify 4",
         author: "Jtadd4",
         avatar: "https://cdn.popsww.com/blog/sites/2/2022/02/zoro-sau-2-nam.jpg",
-        content: "Lorem ipsum, dolor sit amet consectetur adipisicing...."
-    },
-] as { id: number, label: string, author: string, avatar: string, content: string }[]
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing....",
+        isRead: true
+    }
+]
 
 const Notification: React.FC = () => {
     return (
@@ -57,7 +61,7 @@ const Notification: React.FC = () => {
                             {notifications.map(notification => {
                                 return (
                                     <React.Fragment key={notification.id}>
-                                        <li className="flex gap-10 items-center justify-center py-2 primary--hover">
+                                        <li className="transition-all flex gap-10 items-center justify-center hover:bg-gray-100 rounded-lg p-4">
                                             <div>
                                                 <Image
                                                     src={notification.avatar}
@@ -68,12 +72,14 @@ const Notification: React.FC = () => {
                                                 />
                                                 <p className='m-0'>{notification.author}</p>
                                             </div>
-                                            <div>
-                                                <p>{notification.label}</p>
-                                                {notification.content}
+                                            <div className='flex items-center'>
+                                                <div>
+                                                    <p>{notification.label}</p>
+                                                    {notification.content}
+                                                </div>
+                                                {!notification.isRead ? <div className='w-[20px] h-[12px] rounded-full bg-blue-500' /> : null}
                                             </div>
                                         </li>
-                                        <hr />
                                     </React.Fragment>
                                 )
                             })}

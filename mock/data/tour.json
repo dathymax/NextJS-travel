@@ -1,0 +1,54 @@
+[
+	{
+		"id": 1,
+		"country": "Viet Nam",
+		"city": "Ha Noi",
+		"currentPrice": 500000,
+		"oldPrice": 600000,
+		"image": "/assets/mock/tour-image.jpg",
+		"startDate": "20/04/2023",
+		"endDate": "20/04/2023",
+		"discount": 150000,
+		"rate": 5,
+		"currency": "$"
+	},
+	{
+		"id": 2,
+		"country": "Viet Nam",
+		"city": "Ha Noi",
+		"currentPrice": 500000,
+		"oldPrice": 600000,
+		"image": "/assets/mock/tour-image.jpg",
+		"startDate": "20/04/2023",
+		"endDate": "20/04/2023",
+		"discount": 150000,
+		"rate": 5,
+		"currency": "$"
+	},
+	{
+		"id": 3,
+		"country": "Viet Nam",
+		"city": "Ha Noi",
+		"currentPrice": 500000,
+		"oldPrice": 600000,
+		"image": "/assets/mock/tour-image.jpg",
+		"startDate": "20/04/2023",
+		"endDate": "20/04/2023",
+		"discount": 150000,
+		"rate": 5,
+		"currency": "$"
+	},
+	{
+		"id": 4,
+		"country": "Viet Nam",
+		"city": "Ha Noi",
+		"currentPrice": 500000,
+		"oldPrice": 600000,
+		"image": "/assets/mock/tour-image.jpg",
+		"startDate": "20/04/2023",
+		"endDate": "20/04/2023",
+		"discount": 150000,
+		"rate": 5,
+		"currency": "$"
+	}
+]

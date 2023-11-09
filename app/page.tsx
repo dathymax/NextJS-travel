@@ -1,26 +1,16 @@
-import Destinations from "@/components/destinations";
-import HeroBanner from "@/components/hero";
-import NearBy from "@/components/nearby";
-import Search from "@/components/search";
-import Subscribe from "@/components/subscribe";
-import Testimonials from "@/components/testimonials";
-import Trending from "@/components/trending";
-import TourPage from "@/features/tours";
+import Search from "@/components/features/search";
+import HeroBanner from "@/components/layouts/hero";
+import Destinations from "@/components/sections/destinations";
+import NearBy from "@/components/sections/nearby";
+import SomeWhere from "@/components/sections/somewhere";
+import Subscribe from "@/components/sections/subscribe";
+import Testimonials from "@/components/sections/testimonials";
+import Trending from "@/components/sections/trending";
+import tour from "@/mock/data/tour.json"
+
 
 export async function getTours() {
-    const tourList = [
-        {
-            id: 1,
-            country: "Viet Nam",
-            city: "Ha Noi",
-            price: 500000,
-            image: "/assets/mock/tour-image.jpg",
-            startDate: new Date(),
-            endDate: new Date(),
-            discount: 150000,
-            rate: 5
-        }
-    ];
+    const tourList = tour;
 
     return tourList;
 }
@@ -32,7 +22,7 @@ export default async function Home() {
         <main>
             <HeroBanner />
             <Search />
-            <TourPage tourList={tourList} />
+            <SomeWhere tourList={tourList} />
             <Trending />
             <Destinations />
             <NearBy />

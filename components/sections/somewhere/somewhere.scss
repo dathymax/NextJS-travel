@@ -1,0 +1,20 @@
+.tour-page {
+	width: 90%;
+	max-width: var(--max-width);
+	margin: var(--margin);
+
+	&__heading {
+		margin-bottom: 30px;
+	}
+
+	&__categories {
+		&-item {
+			font-size: 13px;
+
+			&.active {
+				background-color: var(--primary);
+				color: white;
+			}
+		}
+	}
+}

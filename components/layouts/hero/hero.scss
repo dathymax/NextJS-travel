@@ -1,0 +1,23 @@
+.hero {
+	&__introduce {
+		position: relative;
+
+		&__title {
+			position: absolute;
+			width: 50vh;
+			top: 30%;
+			left: 5%;
+			z-index: 1;
+		}
+
+		&__actions {
+			position: absolute;
+			width: 70%;
+			padding: 15px 20px 10px 20px;
+			bottom: 15%;
+			left: 15%;
+			background: white;
+			z-index: 1;
+		}
+	}
+}

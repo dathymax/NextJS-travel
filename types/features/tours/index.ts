@@ -1,11 +1,13 @@
-export type TourTypes = {
+export interface TourTypes {
     id: string | number
     city: string
     country: string
-    price: number
+    currentPrice: number
     image: string
-    startDate: Date
-    endDate: Date
+    startDate: Date | string
+    endDate: Date | string
     discount: number
     rate: number
+    currency: string
+    oldPrice: number
 }

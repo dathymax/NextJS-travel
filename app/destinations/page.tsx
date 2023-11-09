@@ -1,10 +1,12 @@
-import Navigation from '@/components/common/header/elements/Navigation'
+import Destinations from '@/components/sections/destinations'
+import NearBy from '@/components/sections/nearby'
 import React from 'react'
 
 const DestinationsPage = () => {
     return (
         <div>
-            DestinationsPage
+            <Destinations />
+            <NearBy />
         </div>
     )
 }

@@ -1,10 +1,10 @@
-import Navigation from '@/components/common/header/elements/Navigation'
+import Subscribe from '@/components/sections/subscribe'
 import React from 'react'
 
 const AboutPage = () => {
     return (
         <div>
-            AboutPage
+            <Subscribe />
         </div>
     )
 }

@@ -1,0 +1,16 @@
+.primary--hover {
+	transition: all ease 0.3s;
+
+	&:hover {
+		color: var(--primary);
+	}
+
+	&--bg {
+		transition: all ease 0.3s;
+
+		&:hover {
+			color: white;
+			background: var(--primary);
+		}
+	}
+}

@@ -8,15 +8,8 @@ import Testimonials from "@/components/sections/testimonials";
 import Trending from "@/components/sections/trending";
 import tour from "@/mock/data/tour.json"
 
-
-export async function getTours() {
-    const tourList = tour;
-
-    return tourList;
-}
-
 export default async function Home() {
-    const tourList = await getTours();
+    const tourList = tour;
 
     return (
         <main>

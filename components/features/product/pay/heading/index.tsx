@@ -1,10 +1,11 @@
 import Rating from '@/components/common/rating';
+import Image from 'next/image';
 import React from 'react';
 
 function ProductPayHeading() {
     return (
         <div className='flex items-center gap-6'>
-            <img src="/assets/images/nb-1.jpg" alt="mock" className='w-[170px] h-[170px] rounded-xl' />
+            <Image height={170} width={170} src="/assets/images/nb-1.jpg" alt="mock" className='w-[170px] h-[170px] rounded-xl' />
 
             <div>
                 <p className='text-black font-bold'>
@@ -15,7 +16,7 @@ function ProductPayHeading() {
                     <span className='text-gray-500'>
                         Hosted by
                     </span>
-                    <img src="/assets/mock/avatar.jpg" alt="avatar" className='w-[20px] h-[20px] rounded-full mx-1' />
+                    <Image height={20} width={20} src="/assets/mock/avatar.jpg" alt="avatar" className='w-[20px] h-[20px] rounded-full mx-1' />
                     <span className="text-black font-bold">
                         Zoe Towne
                     </span>

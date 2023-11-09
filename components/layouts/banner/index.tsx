@@ -42,7 +42,7 @@ const Banner: React.FC = () => {
                 <strong>
                     Explore The World! <i className="fa-solid fa-globe"></i>
                     <h1>
-                        It's a Big World Out There, Go Explore
+                        It&apos;s a Big World Out There, Go Explore
                     </h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, rem!

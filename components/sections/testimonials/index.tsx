@@ -50,7 +50,7 @@ const Testimonials: React.FC = () => {
             </div>
 
             <div className="slider">
-                <h2>Client's Reviews</h2>
+                <h2>Client&apos;s Reviews</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, reprehenderit.</p>
 
                 <Swiper

@@ -19,7 +19,7 @@ const PersonalInfo: React.FC<TypeProps> = ({ userInfo }: TypeProps) => {
         if (userInfo) {
             form.setFieldsValue(userInfo);
         }
-    }, [userInfo])
+    }, [userInfo, form])
 
     const onFinish = (values: UserProfileType) => {
         console.log(values)
@@ -83,37 +83,6 @@ const PersonalInfo: React.FC<TypeProps> = ({ userInfo }: TypeProps) => {
                     </Col>
                 </Row>
             </CustomForm>
-
-            {/* <form className='information__form'>
-                <div className="form__wrapper">
-                    <div className="form__item">
-                        <label htmlFor="displayName">Display name</label>
-                        <input type="text" name="displayName" id='displayName' placeholder='Enter your display name' />
-                    </div>
-                    <div className="form__item">
-                        <label htmlFor="realName">Real name</label>
-                        <input type="text" name="realName" id='realName' placeholder='Enter your real name' />
-                    </div>
-                </div>
-
-                <div className="form__wrapper">
-                    <div className="form__item">
-                        <label htmlFor="phone">Phone number</label>
-                        <input type="tel" id='phone' name="phone" placeholder='Enter your phone number' />
-                    </div>
-                    <div className="form__item">
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id='email' name="email" placeholder='Enter your email' />
-                    </div>
-                </div>
-
-                <div className="form__wrapper">
-                    <div className="form__item">
-                        <label htmlFor="bio">Bio</label>
-                        <input type="text" id='bio' name="bio" placeholder='About yourself in a few words' />
-                    </div>
-                </div>
-            </form> */}
         </section>
     )
 }

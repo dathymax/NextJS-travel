@@ -1,6 +1,6 @@
 import Rating from '@/components/common/rating';
+import Image from 'next/image';
 import React from 'react';
-import { AiFillStar } from "react-icons/ai"
 
 function ProductCartHeading() {
     return (
@@ -15,7 +15,7 @@ function ProductCartHeading() {
                 <Rating />
             </div>
             <div className="user">
-                <img src="/assets/mock/avatar.jpg" alt="avatar" className='w-[60px] h-[60px] rounded-full' />
+                <Image width={60} height={60} src="/assets/mock/avatar.jpg" alt="avatar" className='w-[60px] h-[60px] rounded-full' />
             </div>
         </div>
     );

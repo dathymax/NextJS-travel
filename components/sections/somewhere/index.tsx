@@ -46,7 +46,7 @@ const SomeWhere: React.FC<PropsTypes> = ({ tourList }: PropsTypes) => {
         <section className='tour-page bg-slate-200 rounded-2xl p-14'>
             <div className="tour-page__heading mb-12">
                 <h2 className='font-bold text-4xl mb-2'>Go somewhere</h2>
-                <p className='text-gray-600 text-xl'>Let's go on an adventure</p>
+                <p className='text-gray-600 text-xl'>Let&apos;s go on an adventure</p>
             </div>
 
             <div className="tour-page__categories mb-10 flex items-center justify-between">

@@ -46,7 +46,7 @@ const UserProfile: React.FC = () => {
                 <div className="user__wrapper w-[70%]">
                     <div className="heading">
                         <h2 className="heading__welcome">
-                            Hello, I'm Jtadd Do
+                            Hello, I&apos;m Jtadd Do
                         </h2>
 
                         <Link href={"/account-setting"} className="text-black font-medium text-[14px] heading__edit primary--hover--bg">

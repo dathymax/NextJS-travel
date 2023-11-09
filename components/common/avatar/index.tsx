@@ -7,7 +7,9 @@ interface TypeProps extends AvatarProps {
 
 function AvatarComponent({ children, ...rest }: TypeProps) {
     return (
-        <Avatar {...rest} children={children} />
+        <Avatar {...rest}>
+            {children}
+        </Avatar>
     );
 }
 
